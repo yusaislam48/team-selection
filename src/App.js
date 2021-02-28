@@ -1,23 +1,25 @@
-import logo from './logo.svg';
+import { useEffect, useState } from 'react';
 import './App.css';
+import ShowPlayers from './Components/ShowPlayers/ShowPlayers';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import fakeData from "./FakeData/fakeData.json";
 
 function App() {
+  const [players, setPlayers] = useState([]);
+  useEffect(() => {
+    setPlayers(fakeData);
+  })
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <div className="team">
+          
+        </div>
+        <div className="players">
+          {
+            players.map(player => <ShowPlayers key={player.id} player={player}></ShowPlayers>)
+          }
+        </div>
     </div>
   );
 }
