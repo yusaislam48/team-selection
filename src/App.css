@@ -2,3 +2,13 @@
   display: flex;
   flex-wrap: wrap;
 }
+.addedPlayers{
+  display: flex;
+  flex-wrap: wrap;
+}
+.summary{
+  text-align: center;
+}
+.team{
+  margin: 10px;
+}

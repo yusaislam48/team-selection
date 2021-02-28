@@ -1,0 +1,17 @@
+.addedPlayer{
+    text-align: center;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 10px;
+    width: auto;
+    height: auto;
+    background-color: gray;
+    color: wheat;
+}
+.addedPlayer:hover{
+    cursor: pointer;
+    box-shadow: 0 0 10px #9D00FF;
+}
+.addedPlayer h6{
+    color: white;
+}
