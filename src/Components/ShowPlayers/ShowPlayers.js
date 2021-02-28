@@ -6,6 +6,7 @@ import "./ShowPlayers.css";
 
 const ShowPlayers = (props) => {
     const {name, teamName, email, phone, image, annualSalary} = props.player;
+    const addToTeamBtnHandler = props.addToTeamBtnHandler;
     return (
         <div className="player">
             <img src={image} alt=""/>
@@ -14,7 +15,7 @@ const ShowPlayers = (props) => {
             <p>Email: {email}</p>
             <p>Phone: {phone}</p>
             <p>Annual Salary: {annualSalary}</p>
-            <Button variant="light"><FontAwesomeIcon icon={faUserPlus} /> Add To Team!</Button>{' '}
+            <Button onClick={() => addToTeamBtnHandler(props.player)} variant="light"><FontAwesomeIcon icon={faUserPlus} /> Add To Team!</Button>{' '}
         </div>
     );
 };
