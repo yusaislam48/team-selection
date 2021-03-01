@@ -20,7 +20,7 @@ function App() {
       const newTeamMembers = [...teamMembers, player];
       setTeamMembers(newTeamMembers);
     } else {
-      alert("This Country Already Added!");
+      alert("This Player Already Added!");
     }
 
   }
